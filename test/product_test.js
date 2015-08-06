@@ -3,7 +3,7 @@ var assert = require("assert");
 var productList = require("../productList");
 var products = require("../mostSolditems");
 
-describe("Find data in file", function(){
+//describe("Find data in file", function(){
 
     it('should return a unique list of product in the file synchronously', function(){
 
@@ -11,7 +11,7 @@ describe("Find data in file", function(){
         assert.deepEqual(productLines, ["Milk 1l","Imasi","Bread","Chakalaka Can","Gold Dish Vegetable Curry Can","Fanta 500ml","Coke 500ml","Cream Soda 500ml","Iwisa Pap 5kg","Top Class Soy Mince","Shampoo 1 litre","Soap Bar","Bananas - loose","Apples - loose","Mixed Sweets 5s","Heart Chocolates","Rose (plastic)","Valentine Cards"]);
    });
 
-});
+//});
 
 
     it('should return the total number of items sold for each product', function(){
@@ -59,3 +59,27 @@ describe("Find data in file", function(){
         //console.log(SoldProduct);
 
   });
+
+it('should return the category name and also the number of soldProduct',function() {
+
+  var productsSold = require('../category');
+
+   var categoryProd = productsSold.popularProduct('./files/Nelisa Sales History.csv');
+
+  var  expectedR = {
+
+    'fruits':228,
+    'dairy':267,
+    'toiletries':76,
+    'grain products':177,
+    'gifts':28,
+    'colddrinks':328,
+    'cannedfood':180,
+    'confectionery':192,
+    'dry grocery':98
+
+
+   };
+
+assert.deepEqual(expectedR,categoryProd);
+});

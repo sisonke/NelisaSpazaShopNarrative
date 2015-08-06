@@ -15,6 +15,7 @@ var mostSolditems = require('./mostSolditems');
    	var value = productMap[product];
    	     if(productMap[product] > maximum) {
           maximum = productMap[product];
+        
           SoldProduct = {
               name: product,
               amount: maximum
