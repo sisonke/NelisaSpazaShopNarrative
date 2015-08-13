@@ -33,7 +33,7 @@ var mostSolditems = require('./mostSolditems');
     };
     catMap[categoryName] = catMap[categoryName]+quantity;
    };
-   console.log(catMap);
+   //console.log(catMap);
   return catMap;
   
 }

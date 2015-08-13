@@ -56,8 +56,6 @@ var products = require("../mostSolditems");
 
        assert.deepEqual(expectedMap,mostpopular);
 
-        //console.log(SoldProduct);
-
   });
 
 it('should return the category name and also the number of soldProduct',function() {
@@ -68,18 +66,38 @@ it('should return the category name and also the number of soldProduct',function
 
   var  expectedR = {
 
-    'fruits':228,
-    'dairy':267,
-    'toiletries':76,
-    'grain products':177,
-    'gifts':28,
-    'colddrinks':328,
-    'cannedfood':180,
-    'confectionery':192,
-    'dry grocery':98
-
+         'fruits':228,
+         'dairy':267,
+         'toiletries':76,
+         'grain products':177,
+         'gifts':28,
+         'colddrinks':328,
+         'cannedfood':180,
+         'confectionery':192,
+         'dry grocery':98
 
    };
 
 assert.deepEqual(expectedR,categoryProd);
 });
+
+ it('should return the leastpopular category', function(){
+     var soldProduct = require('../leastpopular');
+
+     var leastpopularCategory = soldProduct.popularProduct('./files/Nelisa Sales History.csv');
+
+     var expectedM = {name: 'gifts',amount: 28};
+
+        assert.deepEqual(leastpopularCategory,expectedM);
+     });  
+
+
+  it('should return the leastpopularproduct', function(){
+     var soldProduct = require('../leastpopularproduct');
+
+     var leastpopularproduct = soldProduct.productsSold('./files/Nelisa Sales History.csv');
+
+     var expectedResults = {name:'Rose (plastic)', amount: 14};
+
+     assert.deepEqual(leastpopularproduct,expectedResults);
+  });                             
