@@ -33,7 +33,7 @@ products.forEach(function(product){
    productMap[productName] = productMap[productName] + productQty;
 
   }); 
-      console.log(productsSold);
+      //console.log(productsSold);
       return productMap;
 
    }

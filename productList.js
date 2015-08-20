@@ -21,7 +21,7 @@ products.forEach(function(product){
        }
       
   }); 
-  console.log(productList);
+  // console.log(productList);
   return productList;
 
 }

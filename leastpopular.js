@@ -24,6 +24,6 @@ var mostSolditems = require('./category');
 
    	     };
    };
-        console.log(leastpopularCategory);
+       // console.log(leastpopularCategory);
         return leastpopularCategory;
 };
